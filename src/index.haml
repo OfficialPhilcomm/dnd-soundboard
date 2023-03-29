@@ -1,0 +1,70 @@
+!!! 5
+%html
+  %head
+    %title App created with staticz
+
+    %meta{charset: "ISO-8859-1"}
+
+    %meta{name: "description", content: "Site description"}
+    %meta{name: "keywords", content: "website, staticz"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+
+    %meta{property: "og:site_name", content: "example.com"}
+    %meta{property: "og:title", content: "Site created with staticz"}
+    %meta{property: "og:description", content: "Site description"}
+    %meta{property: "og:type", content: "website"}
+    %meta{property: "og:url", content: "https://example.com/"}
+    %meta{property: "og:title", content: "App created with staticz"}
+
+    %link{rel: "preconnect", href: "https://fonts.googleapis.com"}
+    %link{rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: true}
+    %link{href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap", rel: "stylesheet"}
+
+    %link{href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', rel: 'stylesheet'}
+
+    %script{type: "module"}
+      :plain
+        import { Application, Controller } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+        window.Stimulus = Application.start()
+
+        Stimulus.register("sound", class extends Controller {
+          async testies({params: { file }}) {
+            if (current_audio) {
+              await this.fadeSoundOut()
+              current_audio.pause()
+            }
+            current_audio = new Audio(file)
+            current_audio.play()
+          }
+
+          stop() {
+            this.fadeSoundOut()
+          }
+
+          async fadeSoundOut() {
+            while (current_audio.volume != 0) {
+              let new_volume = current_audio.volume - 0.05 < 0 ? 0 : current_audio.volume - 0.05
+              current_audio.volume = new_volume
+              await sleep(50)
+            }
+          }
+        })
+
+    :javascript
+      current_audio = null
+
+      function sleep(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+      }
+
+    = stylesheet css_main_path
+
+    = reload_js
+  %body
+    .sounds{data: {controller: "sound"}}
+      %i.bx.bx-stop-circle.sounds-stop{data: {action: "click->sound#stop"}}
+      - Dir["src/sounds/*.mp3"].each do |sound|
+        .sounds-sound
+          .sounds-sound-name= sound.sub("src/sounds/", "").sub(".mp3", "")
+
+          %i.bx.bx-play-circle.sounds-sound-play{data: {action: "click->sound#testies", sound_file_param: sound.sub("src/", "")}}
