@@ -28,12 +28,15 @@
         window.Stimulus = Application.start()
 
         Stimulus.register("sound", class extends Controller {
-          async testies({params: { file }}) {
+          static targets = ["sound"]
+
+          async play() {
             if (current_audio) {
               await this.fadeSoundOut()
               current_audio.pause()
+              this.resetAudio()
             }
-            current_audio = new Audio(file)
+            current_audio = this.soundTarget
             current_audio.play()
           }
 
@@ -48,6 +51,11 @@
               await sleep(50)
             }
           }
+
+          resetAudio() {
+            current_audio.currentTime = 0
+            current_audio.volume = 1
+          }
         })
 
     :javascript
@@ -61,10 +69,12 @@
 
     = reload_js
   %body
-    .sounds{data: {controller: "sound"}}
-      %i.bx.bx-stop-circle.sounds-stop{data: {action: "click->sound#stop"}}
+    .sounds
+      %i.bx.bx-stop-circle.sounds-stop
       - Dir["src/sounds/*.mp3"].each do |sound|
-        .sounds-sound
+        .sounds-sound{data: {controller: "sound"}}
+          %audio{src: sound.sub("src/", ""), data: {sound_target: "sound"}}
+
           .sounds-sound-name= sound.sub("src/sounds/", "").sub(".mp3", "")
 
-          %i.bx.bx-play-circle.sounds-sound-play{data: {action: "click->sound#testies", sound_file_param: sound.sub("src/", "")}}
+          %i.bx.bx-play-circle.sounds-sound-play{data: {action: "click->sound#play"}}
