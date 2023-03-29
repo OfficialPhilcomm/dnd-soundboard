@@ -24,39 +24,10 @@
 
     %script{type: "module"}
       :plain
-        import { Application, Controller } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+        import { Application } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
         window.Stimulus = Application.start()
 
-        Stimulus.register("sound", class extends Controller {
-          static targets = ["sound"]
-
-          async play() {
-            if (current_audio) {
-              await this.fadeSoundOut()
-              current_audio.pause()
-              this.resetAudio()
-            }
-            current_audio = this.soundTarget
-            current_audio.play()
-          }
-
-          stop() {
-            this.fadeSoundOut()
-          }
-
-          async fadeSoundOut() {
-            while (current_audio.volume != 0) {
-              let new_volume = current_audio.volume - 0.05 < 0 ? 0 : current_audio.volume - 0.05
-              current_audio.volume = new_volume
-              await sleep(50)
-            }
-          }
-
-          resetAudio() {
-            current_audio.currentTime = 0
-            current_audio.volume = 1
-          }
-        })
+    %script{type: "module", src: js_sound_controller_path}
 
     :javascript
       current_audio = null
@@ -70,11 +41,11 @@
     = reload_js
   %body
     .sounds
-      %i.bx.bx-stop-circle.sounds-stop
       - Dir["src/sounds/*.mp3"].each do |sound|
-        .sounds-sound{data: {controller: "sound"}}
+        .sounds-sound{data: {controller: "sound", sound_target: "root"}}
           %audio{src: sound.sub("src/", ""), data: {sound_target: "sound"}}
 
           .sounds-sound-name= sound.sub("src/sounds/", "").sub(".mp3", "")
 
           %i.bx.bx-play-circle.sounds-sound-play{data: {action: "click->sound#play"}}
+          %i.bx.bx-stop-circle.sounds-sound-stop{data: {action: "click->sound#stop"}}
