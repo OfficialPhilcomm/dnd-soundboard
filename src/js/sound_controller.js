@@ -9,7 +9,7 @@ Stimulus.register("sound", class extends Controller {
       current_audio.pause()
       this.resetAudio()
     }
-    document.querySelectorAll(".sounds-sound").forEach((e) => {
+    document.querySelectorAll(".soundBoard-category-sounds-soundContainer-sound").forEach((e) => {
       e.classList.remove("playing")
     })
     current_audio = this.soundTarget

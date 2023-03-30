@@ -8,44 +8,48 @@ html,body
 
   font-family: "Open Sans", sans-serif
 
-body
+.soundBoard
   width: 100%
-
-  display: flex
-  flex-direction: column
-  align-items: center
-
-.sounds
+  max-width: 1000px
   margin-inline: auto
 
-  padding: 1rem
-  gap: 1rem
+.soundBoard-category
+  width: 100%
+
+.soundBoard-category-title
+  font-size: 1.5rem
+  font-weight: bold
+
+.soundBoard-category-sounds
+  width: 100%
 
   display: flex
   flex-direction: row
   flex-wrap: wrap
 
-.sounds-sound
-  width: 16rem
+.soundBoard-category-sounds-soundContainer
+  width: 20%
+
   padding: .4rem
 
-  display: flex
-  flex-direction: row
-  align-items: center
+.soundBoard-category-sounds-soundContainer-sound
+  padding: .4rem
+
+  background-color: white
 
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
-  border-radius: 5px
+  border-radius: 10px
 
-.sounds-sound-play
+.soundBoard-category-sounds-soundContainer-sound-play
   margin-left: auto
   font-size: 1.5rem
 
   cursor: pointer
 
-  .sounds-sound.playing &
+  .soundBoard-category-sounds-soundContainer-sound.playing &
     display: none
 
-.sounds-sound-stop
+.soundBoard-category-sounds-soundContainer-sound-stop
   margin-left: auto
   display: none
 
@@ -53,5 +57,5 @@ body
 
   cursor: pointer
 
-  .sounds-sound.playing &
+  .soundBoard-category-sounds-soundContainer-sound.playing &
     display: block

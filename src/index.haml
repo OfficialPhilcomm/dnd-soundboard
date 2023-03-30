@@ -40,13 +40,21 @@
 
     = reload_js
   %body
-    - sounds = load_sounds
-    .sounds
-      - sounds.each do |sound|
-        .sounds-sound{data: {controller: "sound", sound_target: "root"}}
-          %audio{src: "sounds/#{sound.name}.mp3", data: {sound_target: "sound"}}
+    %main.soundBoard
+      - sounds = load_sounds
 
-          .sounds-sound-name= sound.name
+      - sounds_by_category = load_sounds.group_by(&:category)
 
-          %i.bx.bx-play-circle.sounds-sound-play{data: {action: "click->sound#play"}}
-          %i.bx.bx-stop-circle.sounds-sound-stop{data: {action: "click->sound#stop"}}
+      - sounds_by_category.each do |category, category_sounds|
+        .soundBoard-category
+          .soundBoard-category-title= category || "Uncategorized"
+          .soundBoard-category-sounds
+            - category_sounds.each do |sound|
+              .soundBoard-category-sounds-soundContainer
+                .soundBoard-category-sounds-soundContainer-sound{data: {controller: "sound", sound_target: "root"}}
+                  %audio{src: "sounds/#{sound.name}.mp3", data: {sound_target: "sound"}}
+
+                  .soundBoard-category-sounds-soundContainer-sound-name= sound.name
+
+                  %i.bx.bx-play-circle.soundBoard-category-sounds-soundContainer-sound-play{data: {action: "click->sound#play"}}
+                  %i.bx.bx-stop-circle.soundBoard-category-sounds-soundContainer-sound-stop{data: {action: "click->sound#stop"}}
