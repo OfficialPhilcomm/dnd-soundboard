@@ -40,12 +40,13 @@
 
     = reload_js
   %body
+    - sounds = load_sounds
     .sounds
-      - Dir["src/sounds/*.mp3"].each do |sound|
+      - sounds.each do |sound|
         .sounds-sound{data: {controller: "sound", sound_target: "root"}}
-          %audio{src: sound.sub("src/", ""), data: {sound_target: "sound"}}
+          %audio{src: "sounds/#{sound.name}.mp3", data: {sound_target: "sound"}}
 
-          .sounds-sound-name= sound.sub("src/sounds/", "").sub(".mp3", "")
+          .sounds-sound-name= sound.name
 
           %i.bx.bx-play-circle.sounds-sound-play{data: {action: "click->sound#play"}}
           %i.bx.bx-stop-circle.sounds-sound-stop{data: {action: "click->sound#stop"}}
