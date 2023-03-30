@@ -35,10 +35,35 @@ html,body
 .soundBoard-category-sounds-soundContainer-sound
   padding: .4rem
 
+  display: flex
+  flex-direction: row
+  align-items: center
+
   background-color: white
 
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
+  box-shadow: 0 3px 6px rgba(50, 168, 70, .4)
   border-radius: 10px
+
+  &.red
+    color: white
+    background-color: #eb4034
+    box-shadow: 0 3px 6px rgba(235, 64, 52, .4)
+
+  &.playing
+    color: white
+
+    background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)
+    background-size: 400% 400%
+    animation: gradient 5s ease infinite
+
+    box-shadow: none
+
+.soundBoard-category-sounds-soundContainer-sound-name
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+  user-select: none
 
 .soundBoard-category-sounds-soundContainer-sound-play
   margin-left: auto
@@ -59,3 +84,11 @@ html,body
 
   .soundBoard-category-sounds-soundContainer-sound.playing &
     display: block
+
+@keyframes gradient
+	0%
+		background-position: 0% 50%
+	50%
+		background-position: 100% 50%
+	100%
+		background-position: 0% 50%
