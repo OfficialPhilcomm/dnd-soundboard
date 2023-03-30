@@ -13,7 +13,9 @@ class Sound
 end
 
 def load_sounds
-  metadata = YAML.load_file("lib/song_metadata.yml")
+  metadata = Dir["lib/sounds/*.yml"].map do |yml|
+    YAML.load_file(yml)
+  end.reduce({}, :merge)
 
   Dir["src/sounds/*.mp3"].map do |sound|
     name = sound.sub("src/sounds/", "").sub(".mp3", "")
