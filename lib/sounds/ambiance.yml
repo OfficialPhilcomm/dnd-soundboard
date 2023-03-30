@@ -1,22 +1,33 @@
 Tavern:
   category: Ambiance
+  color: green
 Rain:
   category: Ambiance
+  color: green
 Forest:
   category: Ambiance
+  color: green
 City:
   category: Ambiance
+  color: green
 Blizzard:
   category: Ambiance
+  color: green
 Cave:
   category: Ambiance
+  color: green
 Ship:
   category: Ambiance
+  color: green
 Beach:
   category: Ambiance
+  color: green
 Sewers:
   category: Ambiance
+  color: green
 Swamp:
   category: Ambiance
+  color: green
 Volcano:
   category: Ambiance
+  color: green
