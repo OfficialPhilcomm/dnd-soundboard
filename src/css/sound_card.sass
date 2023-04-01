@@ -1,4 +1,4 @@
-.soundBoard-category-sounds-soundContainer
+.soundCard
   width: 100%
 
   @media (min-width: 348px)
@@ -15,7 +15,7 @@
 
   padding: .4rem
 
-.soundBoard-category-sounds-soundContainer-sound
+.soundCard-sound
   padding: .4rem
 
   display: flex
@@ -51,23 +51,23 @@
 
     box-shadow: none
 
-.soundBoard-category-sounds-soundContainer-sound-name
+.soundCard-sound-name
   overflow: hidden
   white-space: nowrap
   text-overflow: ellipsis
 
   user-select: none
 
-.soundBoard-category-sounds-soundContainer-sound-play
+.soundCard-sound-play
   margin-left: auto
   font-size: 1.5rem
 
   cursor: pointer
 
-  .soundBoard-category-sounds-soundContainer-sound.playing &
+  .soundCard-sound.playing &
     display: none
 
-.soundBoard-category-sounds-soundContainer-sound-stop
+.soundCard-sound-stop
   margin-left: auto
   display: none
 
@@ -75,7 +75,7 @@
 
   cursor: pointer
 
-  .soundBoard-category-sounds-soundContainer-sound.playing &
+  .soundCard-sound.playing &
     display: block
 
 @keyframes gradient
