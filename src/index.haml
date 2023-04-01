@@ -43,6 +43,7 @@
       }
 
     = stylesheet css_main_path
+    = stylesheet css_sound_card_path
 
     = reload_js
   %body
@@ -56,11 +57,4 @@
           .soundBoard-category-title= category || "Uncategorized"
           .soundBoard-category-sounds
             - category_sounds.each do |sound|
-              .soundBoard-category-sounds-soundContainer
-                .soundBoard-category-sounds-soundContainer-sound{class: sound.color, data: {controller: "sound", sound_target: "root"}}
-                  %audio{src: "sounds/#{sound.name}.mp3", data: {sound_target: "sound"}}
-
-                  .soundBoard-category-sounds-soundContainer-sound-name{title: sound.name}= sound.name
-
-                  %i.bx.bx-play-circle.soundBoard-category-sounds-soundContainer-sound-play{data: {action: "click->sound#play"}}
-                  %i.bx.bx-stop-circle.soundBoard-category-sounds-soundContainer-sound-stop{data: {action: "click->sound#stop"}}
+              = render "partials/sound", locals: {sound: sound}

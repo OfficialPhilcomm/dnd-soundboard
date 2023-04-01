@@ -3,6 +3,7 @@ Staticz::Manifest.define do
 
   sub :css do
     sass :main
+    sass :sound_card
   end
 
   sub :js do
