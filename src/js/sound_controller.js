@@ -3,26 +3,29 @@ import { Controller } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.j
 Stimulus.register("sound", class extends Controller {
   static targets = ["root", "sound"]
 
+  handlePlay() {
+    this.rootTarget.classList.add("playing")
+  }
+
+  handlePause() {
+    this.rootTarget.classList.remove("playing")
+  }
+
   async play() {
     if (current_audio) {
       await this.fadeSoundOut()
       current_audio.pause()
       this.resetAudio()
     }
-    document.querySelectorAll(".soundCard-sound").forEach((e) => {
-      e.classList.remove("playing")
-    })
+
     current_audio = this.soundTarget
     current_audio.play()
-
-    this.rootTarget.classList.add("playing")
   }
 
   async stop() {
     await this.fadeSoundOut()
     current_audio.pause()
     this.resetAudio()
-    this.rootTarget.classList.remove("playing")
   }
 
   async fadeSoundOut() {
