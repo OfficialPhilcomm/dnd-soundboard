@@ -28,6 +28,9 @@ Sewers:
 Swamp:
   category: Ambiance
   color: green
+Thunderstorm:
+  category: Ambiance
+  color: green
 Volcano:
   category: Ambiance
   color: green
