@@ -25,7 +25,7 @@ def load_sounds
       name,
       sound_metadata["category"],
       sound_metadata["color"],
-      sound_metadata["tags"]
+      Array(sound_metadata["tags"])
     )
   end
 end
