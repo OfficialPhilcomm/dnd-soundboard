@@ -4,6 +4,9 @@ Elven Tavern:
 Pirate Tavern:
   category: Tavern
   color: red
+Shady Tavern:
+  category: Tavern
+  color: red
 Stonehill Inn:
   category: Tavern
   color: red
