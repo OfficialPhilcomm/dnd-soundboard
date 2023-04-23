@@ -4,13 +4,15 @@ Stimulus.register("tags", class extends Controller {
   static targets = ["input", "sound"]
 
   filter() {
-    let tags = this.inputTarget.value.split(" ").filter((e) => (
-      e !== ""
+    let tags = this.inputTarget.value.split(" ").filter((tag) => (
+      tag !== ""
+    )).map((tag) => (
+      new RegExp(tag)
     ))
 
     if (tags.length > 0) {
       this.soundTargets.forEach((soundCard) => {
-        if (JSON.parse(soundCard.dataset.tags).includes(...tags)) {
+        if (tags.some(rx => rx.test(...JSON.parse(soundCard.dataset.tags)))) {
           soundCard.classList.remove("hidden")
         } else {
           soundCard.classList.add("hidden")
