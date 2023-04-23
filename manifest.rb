@@ -8,6 +8,7 @@ Staticz::Manifest.define do
 
   sub :js do
     js :sound_controller
+    js :tags_controller
   end
 
   sub :sounds do

@@ -1,4 +1,4 @@
-.soundCard
+.soundCard{data: {tags_target: "sound", tags: [["test", "testaswell"].sample]}}
   .soundCard-sound{class: sound.color, data: {controller: "sound", sound_target: "root"}}
     %audio{loop: true, src: "sounds/#{sound.name}.mp3", data: {sound_target: "sound", action: "play->sound#handlePlay pause->sound#handlePause"}}
 
