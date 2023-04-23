@@ -21,11 +21,15 @@ def load_sounds
     name = sound.sub("src/sounds/", "").sub(".mp3", "")
     sound_metadata = metadata[name] || {}
 
+    tags = Array(sound_metadata["tags"]).map do |tag|
+      tag.split(" ")
+    end.flatten
+
     Sound.new(
       name,
       sound_metadata["category"],
       sound_metadata["color"],
-      Array(sound_metadata["tags"])
+      tags
     )
   end
 end
