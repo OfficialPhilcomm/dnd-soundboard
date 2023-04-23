@@ -1,8 +1,8 @@
 .soundCard{data: {tags_target: "sound", tags: [["test", "testaswell"].sample]}}
-  .soundCard-sound{class: sound.color, data: {controller: "sound", sound_target: "root"}}
+  .soundCard-sound{class: sound.color, data: {controller: "sound", sound_target: "root", action: "click->sound#togglePlay"}}
     %audio{loop: true, src: "sounds/#{sound.name}.mp3", data: {sound_target: "sound", action: "play->sound#handlePlay pause->sound#handlePause"}}
 
     .soundCard-sound-name{title: sound.name}= sound.name
 
-    %i.bx.bx-play-circle.soundCard-sound-play{data: {action: "click->sound#play"}}
-    %i.bx.bx-stop-circle.soundCard-sound-stop{data: {action: "click->sound#stop"}}
+    %i.bx.bx-play-circle.soundCard-sound-play
+    %i.bx.bx-stop-circle.soundCard-sound-stop

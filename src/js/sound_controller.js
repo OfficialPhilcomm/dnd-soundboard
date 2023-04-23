@@ -11,6 +11,14 @@ Stimulus.register("sound", class extends Controller {
     this.rootTarget.classList.remove("playing")
   }
 
+  async togglePlay() {
+    if (this.rootTarget.classList.contains("playing")) {
+      await this.stop()
+    } else {
+      await this.play()
+    }
+  }
+
   async play() {
     if (current_audio) {
       await this.fadeSoundOut()
