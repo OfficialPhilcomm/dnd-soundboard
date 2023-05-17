@@ -15,7 +15,7 @@
 
   padding: .4rem
 
-  &.hidden
+  &:not(.playing).hidden
     display: none
 
 .soundCard-sound
@@ -52,7 +52,7 @@
     background-color: #8142f5
     box-shadow: 0 3px 6px rgba(129, 66, 245, .4)
 
-  &.playing
+  .soundCard.playing &
     color: white
 
     background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)
@@ -72,7 +72,7 @@
   margin-left: auto
   font-size: 1.5rem
 
-  .soundCard-sound.playing &
+  .soundCard.playing &
     display: none
 
 .soundCard-sound-stop
@@ -81,7 +81,7 @@
 
   font-size: 1.5rem
 
-  .soundCard-sound.playing &
+  .soundCard.playing &
     display: block
 
 @keyframes gradient
