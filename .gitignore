@@ -2,3 +2,4 @@
 
 src/sounds
 build/
+lib/sounds/*.yml
