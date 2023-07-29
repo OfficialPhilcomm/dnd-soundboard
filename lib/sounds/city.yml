@@ -16,6 +16,7 @@ Cloud City:
 Dwarven City:
   category: City
   color: yellow
+  tags: session
 Eastern Village:
   category: City
   color: yellow

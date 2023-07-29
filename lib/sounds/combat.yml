@@ -25,6 +25,9 @@ Epic Fight:
 Final Boss:
   category: Combat
   color: red
+Low Level Combat:
+  category: Combat
+  color: red
 Mage Battle:
   category: Combat
   color: red

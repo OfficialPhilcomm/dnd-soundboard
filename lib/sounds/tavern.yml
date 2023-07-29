@@ -29,3 +29,7 @@ The Tall Tales Tavern:
 The Wandering Bard Tavern:
   category: Tavern
   color: red
+  tags: session
+Cozy Tavern:
+  category: Tavern
+  color: red

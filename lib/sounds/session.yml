@@ -1,6 +1,6 @@
 Ancient Evil Awakens:
   color: purple
-  tags: cos curse of strahd session
+  tags: cos curse of strahd
 Catacomb:
   color: purple
   tags: cos curse of strahd
@@ -21,12 +21,14 @@ Deep Waters:
   tags: cos curse of strahd
 Far Realm:
   color: purple
-  tags: cos curse of strahd
+  tags: cos curse of strahd session
 Green Plains:
   color: purple
   tags: cos curse of strahd
 Mysterious Forest:
   color: purple
-  tags: cos curse of strahd session
-Session Zero:
-  tags: cos curse of strahd session
+  tags: cos curse of strahd
+Lost Temple Ruins:
+  tags: session
+Tense Path:
+  tags: session

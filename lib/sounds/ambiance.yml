@@ -7,6 +7,9 @@ Rain:
 Forest:
   category: Ambiance
   color: green
+Forest (Night):
+  category: Ambiance
+  color: green
 City:
   category: Ambiance
   color: green
@@ -20,6 +23,9 @@ Ship:
   category: Ambiance
   color: green
 Beach:
+  category: Ambiance
+  color: green
+Marketplace:
   category: Ambiance
   color: green
 Sewers:
