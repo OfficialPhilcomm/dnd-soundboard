@@ -1,5 +1,4 @@
 require "yaml"
-require "pry"
 
 class Sound
   attr_reader :name, :category, :color, :tags

@@ -34,7 +34,7 @@
         window.Stimulus = Application.start()
 
     %script{type: "module", src: js_sound_controller_path}
-    %script{type: "module", src: js_tags_controller_path}
+    %script{type: "module", src: js_filter_controller_path}
 
     :javascript
       current_audio = null
@@ -48,11 +48,15 @@
 
     = reload_js
   %body
-    %main.soundBoard{data: {controller: "tags"}}
-      .soundBoard-search
-        .soundBoard-search-title Search
-        %input.soundBoard-search-input{data: {tags_target: "input", action: "input->tags#filter"}}
-      - load_sounds.group_by(&:category).each do |category, category_sounds|
+    %main.soundBoard{data: {controller: "filter"}}
+      - sounds = load_sounds
+      .soundBoard-filter
+        .soundBoard-filter-title Search
+        %input.soundBoard-filter-input{data: {filter_target: "input", action: "input->filter#filter"}}
+        .soundBoard-filter-tags
+          - sounds.map(&:tags).flatten.uniq.sort.each do |tag|
+            .soundBoard-filter-tags-tag{data: {filter_target: "tag", action: "click->filter#toggleTag click->filter#filter", tag: tag}}= tag
+      - sounds.group_by(&:category).each do |category, category_sounds|
         .soundBoard-category
           .soundBoard-category-title= category || "Uncategorized"
           .soundBoard-category-sounds
