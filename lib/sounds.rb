@@ -1,34 +1,37 @@
 require "yaml"
 
 class Sound
-  attr_reader :name, :category, :color, :tags
+  attr_reader :name, :src, :category, :color, :tags
 
-  def initialize(name, category, color, tags)
+  def initialize(name, src, category, color, tags)
     @name = name
+    @src = src
     @category = category
     @color = color
     @tags = tags
   end
 end
 
+def categories
+  @_categories ||= Dir["lib/categories/*.yml"].map do |category|
+    YAML.load_file(category)
+  end
+end
+
 def load_sounds
-  metadata = Dir["lib/sounds/*.yml"].map do |yml|
-    YAML.load_file(yml)
-  end.reduce({}, :merge)
+  tags = YAML.load_file("lib/tags.yml")
 
-  Dir["src/sounds/*.mp3"].map do |sound|
-    name = sound.sub("src/sounds/", "").sub(".mp3", "")
-    sound_metadata = metadata[name] || {}
+  Dir["src/sounds/**/*.mp3"].map do |sound|
+    full_name = sound.sub("src/sounds/", "").sub(".mp3", "")
 
-    tags = Array(sound_metadata["tags"]).map do |tag|
-      tag.split(" ")
-    end.flatten
+    category = (categories.find {|c| c["sounds"].include? full_name} || {"name" => nil, "color" => nil})
 
     Sound.new(
-      name,
-      sound_metadata["category"],
-      sound_metadata["color"],
-      tags
+      sound.split("/").last.sub(".mp3", ""),
+      sound.sub("src/sounds/", ""),
+      category["name"],
+      category["color"],
+      tags[full_name] || []
     )
   end
 end

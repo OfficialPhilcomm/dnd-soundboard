@@ -1,0 +1,18 @@
+name: Combat
+color: red
+sounds:
+  - bardify/Aberration Fight
+  - bardify/Ambush
+  - bardify/Ancient Construct Fight
+  - bardify/Battle Arena
+  - bardify/Battle of Lost Souls
+  - bardify/Duel
+  - bardify/Epic Combat
+  - bardify/Epic Fight
+  - bardify/Final Boss
+  - bardify/Low Level Combat
+  - bardify/Mage Battle
+  - bardify/Ship Combat
+  - bardify/Skeleton Battle
+  - bardify/The Last Fight
+  - bardify/Quirky Combat
