@@ -59,6 +59,9 @@
       - sounds.group_by(&:category).each do |category, category_sounds|
         .soundBoard-category
           .soundBoard-category-title= category || "Uncategorized"
-          .soundBoard-category-sounds
-            - category_sounds.each do |sound|
-              = render "partials/sound", locals: {sound: sound}
+          - category_sounds.group_by(&:album).each do |album, album_sounds|
+            .soundBoard-category-album
+              .soundBoard-category-album-title= album
+              .soundBoard-category-album-sounds
+                - album_sounds.each do |sound|
+                  = render "partials/sound", locals: {sound: sound}

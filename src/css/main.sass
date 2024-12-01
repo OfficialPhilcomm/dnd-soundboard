@@ -1,3 +1,5 @@
+@import "src/css/design"
+
 *
   box-sizing: border-box
 
@@ -12,6 +14,11 @@ html,body
   width: 100%
   max-width: 1000px
   margin-inline: auto
+  padding: $spacingLarge
+
+  display: flex
+  flex-direction: column
+  gap: $spacingLarge
 
 .soundBoard-filter
 .soundBoard-filter-title
@@ -41,13 +48,34 @@ html,body
 .soundBoard-category
   width: 100%
 
+  display: flex
+  flex-direction: column
+  gap: $spacingMedium
+
 .soundBoard-category-title
-  font-size: 1.5rem
+  padding-left: $spacingMedium
+
+  font-size: $fontSizeExtraLarge
   font-weight: bold
 
-.soundBoard-category-sounds
-  width: 100%
+.soundBoard-category-album
+.soundBoard-category-album-title
+  padding-left: $spacingLarge
 
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
+  font-size: $fontSizeSmall
+
+.soundBoard-category-album-sounds
+  width: 100%
+  max-width: 100%
+  overflow-x: hidden
+
+  display: grid
+  grid-template-columns: 100%
+  @media (min-width: 348px)
+    grid-template-columns: repeat(2, 50%)
+  @media (min-width: 522px)
+    grid-template-columns: repeat(3, calc(100% / 3))
+  @media (min-width: 696px)
+    grid-template-columns: repeat(4, 25%)
+  @media (min-width: 870px)
+    grid-template-columns: repeat(5, 20%)

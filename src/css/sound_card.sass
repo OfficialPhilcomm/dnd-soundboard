@@ -1,19 +1,9 @@
+@import "src/css/design"
+
 .soundCard
   width: 100%
 
-  @media (min-width: 348px)
-    width: 50%
-
-  @media (min-width: 522px)
-    width: calc(100% / 3)
-
-  @media (min-width: 696px)
-    width: 25%
-
-  @media (min-width: 870px)
-    width: 20%
-
-  padding: .4rem
+  padding: $spacingSmall
 
   &:not(.playing).hidden
     display: none

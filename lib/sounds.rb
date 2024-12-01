@@ -1,12 +1,13 @@
 require "yaml"
 
 class Sound
-  attr_reader :name, :src, :category, :color, :tags
+  attr_reader :name, :src, :category, :album, :color, :tags
 
-  def initialize(name, src, category, color, tags)
+  def initialize(name:, src:, category:, album:, color:, tags:)
     @name = name
     @src = src
     @category = category
+    @album = album
     @color = color
     @tags = tags
   end
@@ -25,13 +26,17 @@ def load_sounds
     full_name = sound.sub("src/sounds/", "").sub(".mp3", "")
 
     category = (categories.find {|c| c["sounds"].include? full_name} || {"name" => nil, "color" => nil})
+    album = sound.sub("src/sounds/", "").split("/")[..-2].join(" / ").gsub("_", " ").split(" ").map do |word|
+      word.capitalize
+    end.join(" ")
 
     Sound.new(
-      sound.split("/").last.sub(".mp3", ""),
-      sound.sub("src/sounds/", ""),
-      category["name"],
-      category["color"],
-      tags[full_name] || []
+      name: sound.split("/").last.sub(".mp3", ""),
+      src: sound.sub("src/sounds/", ""),
+      category: category["name"],
+      album: album,
+      color: category["color"],
+      tags: tags[full_name] || []
     )
   end.sort_by(&:name)
 end
