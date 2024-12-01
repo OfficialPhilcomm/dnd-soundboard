@@ -58,7 +58,8 @@
             .soundBoard-filter-tags-tag{data: {filter_target: "tag", action: "click->filter#toggleTag click->filter#filter", tag: tag}}= tag
       - sounds.group_by(&:category).each do |category, category_sounds|
         .soundBoard-category
-          .soundBoard-category-title= category || "Uncategorized"
+          - if category
+            .soundBoard-category-title= category
           - category_sounds.group_by(&:album).each do |album, album_sounds|
             .soundBoard-category-album
               .soundBoard-category-album-title= album
