@@ -33,5 +33,5 @@ def load_sounds
       category["color"],
       tags[full_name] || []
     )
-  end
+  end.sort_by(&:name)
 end

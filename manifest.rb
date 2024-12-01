@@ -12,10 +12,14 @@ Staticz::Manifest.define do
   end
 
   sub :sounds do
-    sub :bardify do
-      Dir["src/sounds/bardify/*.mp3"].each do |sound|
-        file sound.sub("src/sounds/bardify/", "")
-      end
+    sub :bardify
+    sub :monument_studios do
+      sub :fantasy_music_vol_1
+      sub :fantasy_music_vol_2
+    end
+
+    Dir["src/sounds/**/*.mp3"].each do |sound|
+      file sound.sub("src/sounds/", "")
     end
   end
 
