@@ -62,9 +62,12 @@ html,body
 .soundBoard-category
   width: 100%
 
-  display: flex
+  display: none
   flex-direction: column
   gap: $spacingMedium
+
+  &:has(.soundCard:not(.hidden)), &:has(.soundCard.playing)
+    display: flex
 
 .soundBoard-category-title
   padding-left: $spacingMedium
@@ -73,6 +76,11 @@ html,body
   font-weight: bold
 
 .soundBoard-category-album
+  display: none
+
+  &:has(.soundCard:not(.hidden)), &:has(.soundCard.playing)
+    display: block
+
 .soundBoard-category-album-title
   padding-left: $spacingLarge
 
