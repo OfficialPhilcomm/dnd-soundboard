@@ -16,6 +16,9 @@ Staticz::Manifest.define do
     sub :monument_studios do
       sub :fantasy_music_vol_1
       sub :fantasy_music_vol_2
+
+      sub :battle_music_vol_1
+      sub :battle_music_vol_2
     end
 
     Dir["src/sounds/**/*.mp3"].each do |sound|
