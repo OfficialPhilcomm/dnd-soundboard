@@ -1,6 +1,6 @@
 .soundCard{data: {controller: "sound", sound_target: "root", filter_target: "sound", tags: sound.tags, name: sound.name}}
   .soundCard-sound{class: sound.color, data: {action: "click->sound#togglePlay"}}
-    %audio{loop: true, src: "sounds/#{sound.src}", data: {sound_target: "sound", action: "play->sound#handlePlay pause->sound#handlePause"}}
+    %audio{loop: true, src: "sounds/#{sound.src}", preload: "none", data: {sound_target: "sound", action: "play->sound#handlePlay pause->sound#handlePause"}}
 
     .soundCard-sound-name{title: sound.name}= sound.name
 

@@ -1,9 +1,9 @@
-@import "src/css/design"
+@use "design"
 
 .soundCard
   width: 100%
 
-  padding: $spacingSmall
+  padding: design.$spacingSmall
 
   &:not(.playing).hidden
     display: none
@@ -13,7 +13,7 @@
 
   display: grid
   grid-template-columns: 1fr auto
-  gap: $spacingSmall
+  gap: design.$spacingSmall
 
   background-color: white
 
@@ -24,18 +24,18 @@
 
   &.red
     color: white
-    background-color: $colorRed500
-    box-shadow: 0 3px 6px rgba($colorRed500, .4)
+    background-color: design.$colorRed500
+    box-shadow: 0 3px 6px rgba(design.$colorRed500, .4)
 
   &.yellow
     color: white
-    background-color: $colorAmber500
-    box-shadow: 0 3px 6px rgba($colorAmber500, .4)
+    background-color: design.$colorAmber500
+    box-shadow: 0 3px 6px rgba(design.$colorAmber500, .4)
 
   &.green
     color: white
-    background-color: $colorGreen500
-    box-shadow: 0 3px 6px rgba($colorGreen500, .4)
+    background-color: design.$colorGreen500
+    box-shadow: 0 3px 6px rgba(design.$colorGreen500, .4)
 
   &.purple
     color: white
@@ -77,9 +77,9 @@
     display: block
 
 @keyframes gradient
-	0%
-		background-position: 0% 50%
-	50%
-		background-position: 100% 50%
-	100%
-		background-position: 0% 50%
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 50%

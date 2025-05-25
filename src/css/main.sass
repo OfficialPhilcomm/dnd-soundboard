@@ -1,4 +1,4 @@
-@import "src/css/design"
+@use "design"
 
 *
   box-sizing: border-box
@@ -14,27 +14,27 @@ html,body
   width: 100%
   max-width: 1000px
   margin-inline: auto
-  padding: $spacingLarge
+  padding: design.$spacingLarge
 
   display: flex
   flex-direction: column
-  gap: $spacingLarge
+  gap: design.$spacingLarge
 
 .soundBoard-filter
-  padding-left: $spacingLarge
+  padding-left: design.$spacingLarge
 
 .soundBoard-filter-title
 .soundBoard-filter-input
-  padding: ($spacingMedium + .125rem) $spacingLarge $spacingMedium $spacingLarge
+  padding: (design.$spacingMedium + .125rem) design.$spacingLarge design.$spacingMedium design.$spacingLarge
 
-  font-size: $fontSizeSmall
+  font-size: design.$fontSizeSmall
   font-family: "Varela Round"
   font-weight: bold
 
-  border: 2px solid $colorSlate400
+  border: 2px solid design.$colorSlate400
   border-radius: 10px
 
-  box-shadow: inset 0 .25rem 0 0 $colorSlate200
+  box-shadow: inset 0 .25rem 0 0 design.$colorSlate200
 
 .soundBoard-filter-tags
   padding: .5rem
@@ -50,13 +50,13 @@ html,body
   font-size: .85rem
   font-weight: 100
 
-  background-color: $colorSlate200
+  background-color: design.$colorSlate200
   border-radius: 100px
 
   cursor: pointer
 
   &.selected
-    background-color: $colorBlue500
+    background-color: design.$colorBlue500
     color: white
 
 .soundBoard-category
@@ -64,15 +64,15 @@ html,body
 
   display: none
   flex-direction: column
-  gap: $spacingMedium
+  gap: design.$spacingMedium
 
   &:has(.soundCard:not(.hidden)), &:has(.soundCard.playing)
     display: flex
 
 .soundBoard-category-title
-  padding-left: $spacingMedium
+  padding-left: design.$spacingMedium
 
-  font-size: $fontSizeExtraLarge
+  font-size: design.$fontSizeExtraLarge
   font-weight: bold
 
 .soundBoard-category-album
@@ -82,9 +82,9 @@ html,body
     display: block
 
 .soundBoard-category-album-title
-  padding-left: $spacingLarge
+  padding-left: design.$spacingLarge
 
-  font-size: $fontSizeSmall
+  font-size: design.$fontSizeSmall
 
 .soundBoard-category-album-sounds
   width: 100%

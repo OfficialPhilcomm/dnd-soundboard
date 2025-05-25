@@ -20,9 +20,10 @@ Staticz::Manifest.define do
       sub :battle_music_vol_1
       sub :battle_music_vol_2
     end
+    sub :youtube
 
-    Dir["src/sounds/**/*.mp3"].each do |sound|
-      file sound.sub("src/sounds/", "")
+    Dir["src/sounds/**/*.mp3"].each do |f|
+      sound f.sub("src/sounds/", "")
     end
   end
 

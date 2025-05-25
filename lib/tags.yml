@@ -1,8 +1,28 @@
-bardify/Vampire Castle:
+bardify/Eastern Village:
   - session
-bardify/Dark Castle:
+bardify/Tavern Concert:
   - session
-bardify/Tragic Betrayal:
+
+monument_studios/battle_music_vol_1/Dragonstone Drums:
   - session
-bardify/Monster Lair:
+monument_studios/battle_music_vol_2/The Long Night Drums:
+  - session
+monument_studios/fantasy_music_vol_1/Peaceful Territory:
+  - session
+monument_studios/fantasy_music_vol_2/Marketplace:
+  - session
+
+youtube/A question of Honor:
+  - session
+youtube/Blade of the Night:
+  - session
+youtube/Heritage:
+  - session
+youtube/Last Blood:
+  - session
+youtube/Asahiro:
+  - session
+youtube/Champion of the Rising:
+  - session
+youtube/Land of the Rising Sun:
   - session

@@ -20,7 +20,7 @@ def categories
 end
 
 def load_sounds
-  tags = YAML.load_file("lib/tags.yml")
+  tags = YAML.load_file("lib/tags.yml") || {}
 
   Dir["src/sounds/**/*.mp3"].map do |sound|
     full_name = sound.sub("src/sounds/", "").sub(".mp3", "")
