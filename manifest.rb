@@ -12,15 +12,15 @@ Staticz::Manifest.define do
   end
 
   sub :sounds do
-    sub :bardify
-    sub :monument_studios do
-      sub :fantasy_music_vol_1
-      sub :fantasy_music_vol_2
+    sub "Bardify"
+    sub "Monument Studios" do
+      sub "Fantasy Music Vol 1"
+      sub "Fantasy Music Vol 2"
 
-      sub :battle_music_vol_1
-      sub :battle_music_vol_2
+      sub "Battle Music Vol 1"
+      sub "Battle Music Vol 2"
     end
-    sub :youtube
+    sub "YouTube"
 
     Dir["src/sounds/**/*.mp3"].each do |f|
       sound f.sub("src/sounds/", "")

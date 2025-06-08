@@ -59,34 +59,18 @@ html,body
     background-color: design.$colorBlue500
     color: white
 
-.soundBoard-category
-  width: 100%
-
-  display: none
-  flex-direction: column
-  gap: design.$spacingMedium
-
-  &:has(.soundCard:not(.hidden)), &:has(.soundCard.playing)
-    display: flex
-
-.soundBoard-category-title
-  padding-left: design.$spacingMedium
-
-  font-size: design.$fontSizeExtraLarge
-  font-weight: bold
-
-.soundBoard-category-album
+.soundBoard-album
   display: none
 
   &:has(.soundCard:not(.hidden)), &:has(.soundCard.playing)
     display: block
 
-.soundBoard-category-album-title
+.soundBoard-album-title
   padding-left: design.$spacingLarge
 
   font-size: design.$fontSizeSmall
 
-.soundBoard-category-album-sounds
+.soundBoard-album-sounds
   width: 100%
   max-width: 100%
 

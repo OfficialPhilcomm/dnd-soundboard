@@ -1,15 +1,13 @@
 bardify/Eastern Village:
   - session
-bardify/Tavern Concert:
-  - session
 
-monument_studios/battle_music_vol_1/Dragonstone Drums:
+monument_studios/fantasy_music_vol_1/End of Act:
   - session
-monument_studios/battle_music_vol_2/The Long Night Drums:
+bardify/Rain:
   - session
-monument_studios/fantasy_music_vol_1/Peaceful Territory:
+monument_studios/fantasy_music_vol_2/Peaceful Meadow:
   - session
-monument_studios/fantasy_music_vol_2/Marketplace:
+monument_studios/fantasy_music_vol_1/Misty Temple:
   - session
 
 youtube/A question of Honor:

@@ -3,29 +3,29 @@ require "yaml"
 class Sound
   attr_reader :name, :src, :category, :album, :color, :tags
 
-  def initialize(name:, src:, category:, album:, color:, tags:)
+  def initialize(name:, src:, album:, tags:)
     @name = name
     @src = src
-    @category = category
     @album = album
-    @color = color
     @tags = tags
   end
 end
 
-def categories
-  @_categories ||= Dir["lib/categories/*.yml"].map do |category|
-    YAML.load_file(category)
-  end
-end
-
 def load_sounds
-  tags = YAML.load_file("lib/tags.yml") || {}
+  tags = Dir["lib/tags/**/*.yml"].map do |tags_file|
+    album_tags = {}
+    album_name = tags_file.gsub("lib/tags/", "").gsub(".yml", "")
+
+    YAML.load(File.read(tags_file)).each do |key, value|
+      album_tags["#{album_name}/#{key}"] = value
+    end
+
+    album_tags
+  end.reduce({}, :merge)
 
   Dir["src/sounds/**/*.mp3"].map do |sound|
     full_name = sound.sub("src/sounds/", "").sub(".mp3", "")
 
-    category = (categories.find {|c| c["sounds"].include? full_name} || {"name" => nil, "color" => nil})
     album = sound.sub("src/sounds/", "").split("/")[..-2].join(" / ").gsub("_", " ").split(" ").map do |word|
       word.capitalize
     end.join(" ")
@@ -33,10 +33,8 @@ def load_sounds
     Sound.new(
       name: sound.split("/").last.sub(".mp3", ""),
       src: sound.sub("src/sounds/", ""),
-      category: category["name"],
       album: album,
-      color: category["color"],
       tags: tags[full_name] || []
     )
-  end.sort_by {|s| [s.category || "", s.album, s.name]}
+  end.sort_by {|s| [s.album, s.name]}
 end
