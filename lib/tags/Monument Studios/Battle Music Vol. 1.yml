@@ -1,6 +1,4 @@
 ---
-Showdown:
-- combat
 Aggressive Maneuvers:
 - combat
 Allied Reinforcements:
@@ -37,11 +35,11 @@ Divide and Conquer:
 - combat
 Dragonborn:
 - combat
-Dragonstone Drums B:
+Dragonstone:
 - combat
 Dragonstone Drums:
 - combat
-Dragonstone:
+Dragonstone Drums B:
 - combat
 Dungeon:
 - combat
@@ -95,9 +93,9 @@ Olympus:
 - combat
 Outbreak Piano:
 - combat
-Outplayed Choir:
-- combat
 Outplayed:
+- combat
+Outplayed Choir:
 - combat
 Paragon Dark Dulcimers:
 - combat
@@ -111,19 +109,21 @@ Pursuit:
 - combat
 Rings of Power:
 - combat
-Simple Combat B:
+Showdown:
 - combat
 Simple Combat:
 - combat
-Star Theatre:
+Simple Combat B:
 - combat
-Stepstones Battle Atmos:
+Star Theatre:
 - combat
 Stepstones:
 - combat
-Tarnished Atmos:
+Stepstones Battle Atmos:
 - combat
 Tarnished:
+- combat
+Tarnished Atmos:
 - combat
 The Long Night:
 - combat

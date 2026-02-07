@@ -1,9 +1,9 @@
 ---
+Action Orchestra:
+- combat
 Action Orchestra B:
 - combat
 Action Orchestra C:
-- combat
-Action Orchestra:
 - combat
 Anticipation:
 - combat
@@ -41,11 +41,11 @@ Enemy Encampment:
 - combat
 Enemy Forces:
 - combat
-Extinction B Pitched:
+Extinction:
 - combat
 Extinction B:
 - combat
-Extinction:
+Extinction B Pitched:
 - combat
 Formation B:
 - combat
@@ -59,9 +59,9 @@ Infiltrate:
 - combat
 Kargaths Theme:
 - combat
-Medieval Drama B:
-- combat
 Medieval Drama:
+- combat
+Medieval Drama B:
 - combat
 Monument:
 - combat
@@ -79,15 +79,15 @@ Orcish Encampment B:
 - combat
 Orcish Encampment C:
 - combat
-Pause Screen Battle Music:
-- combat
 Pause:
+- combat
+Pause Screen Battle Music:
 - combat
 Personal:
 - combat
-Pre Battle Ambience:
-- combat
 Pre Battle:
+- combat
+Pre Battle Ambience:
 - combat
 Precombat:
 - combat
@@ -109,9 +109,9 @@ Star Theatre D:
 - combat
 Star Theatre E:
 - combat
-Stockades B:
-- combat
 Stockades:
+- combat
+Stockades B:
 - combat
 Strained:
 - combat
@@ -127,7 +127,7 @@ War Drums:
 - combat
 Wardrums B:
 - combat
-Warzone B:
-- combat
 Warzone:
+- combat
+Warzone B:
 - combat

@@ -29,7 +29,7 @@ task :regenerate_ymls do
         sound_data[sound] = nil
       end
 
-    File.write(tags_file, sound_data.to_yaml)
+    File.write(tags_file, sound_data.sort.to_h.to_yaml)
   end
 
   tag_files_with_album.each do |album|
@@ -64,7 +64,7 @@ task :regenerate_ymls do
       end
     end
 
-    File.write(tags_file, sound_data.to_yaml)
+    File.write(tags_file, sound_data.sort.to_h.to_yaml)
   end
 end
 
@@ -88,6 +88,6 @@ task :generate_tag_files do
       tags_config[sound] = nil
     end
 
-    File.write(File.join("lib", "tags", album + ".yml"), tags_config.to_yaml)
+    File.write(File.join("lib", "tags", album + ".yml"), tags_config.sort.to_h.to_yaml)
   end
 end

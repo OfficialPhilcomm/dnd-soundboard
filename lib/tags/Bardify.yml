@@ -31,6 +31,8 @@ Cave:
 - ambience
 Cemetery:
 Chase:
+City:
+- ambience
 City Temple:
 - city
 City in the Desert:
@@ -39,8 +41,6 @@ City of Thieves:
 - city
 City of Towers:
 - city
-City:
-- ambience
 Cloud City:
 - city
 Cosmic Horror:
@@ -80,9 +80,9 @@ Fiend Fight:
 Final Boss:
 - combat
 - session
-Forest (Night):
-- ambience
 Forest:
+- ambience
+Forest (Night):
 - ambience
 Forsaken Town:
 Gala Night:
@@ -153,10 +153,10 @@ Shadowfell:
 Shady Alley:
 Shady Tavern:
 - tavern
-Ship Combat:
-- combat
 Ship:
 - ambience
+Ship Combat:
+- combat
 Skeleton Battle:
 - combat
 Small City:
@@ -171,6 +171,8 @@ Surprise:
 Suspense:
 Swamp:
 - ambience
+Tavern:
+- ambience
 Tavern Concert:
 - tavern
 Tavern Dance:
@@ -179,8 +181,6 @@ Tavern Inn:
 - tavern
 Tavern in a Desert:
 - tavern
-Tavern:
-- ambience
 Tense Negotiations:
 Tense Path:
 The Abyssal Passage:
@@ -202,9 +202,9 @@ Underdark:
 Underwater City:
 - city
 Vampire Castle:
-Village Feast:
 Village:
 - ambience
+Village Feast:
 Volcano:
 - ambience
 Wasteland:
