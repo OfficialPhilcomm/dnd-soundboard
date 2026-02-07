@@ -58,8 +58,8 @@ Dungeon Boss:
 Dwarven City:
 - city
 Eastern Village:
-- session
 - city
+- seigai
 Elven City:
 - city
 Elven Garden:
@@ -79,7 +79,6 @@ Feywild:
 Fiend Fight:
 Final Boss:
 - combat
-- session
 Forest:
 - ambience
 Forest (Night):
@@ -140,7 +139,6 @@ Quirky Combat:
 - combat
 Rain:
 - ambience
-- session
 Running From Guards:
 Sailing the Astral Sea:
 Sea Adventure:
