@@ -14,11 +14,11 @@ Staticz::Manifest.define do
   sub :sounds do
     sub "Bardify"
     sub "Monument Studios" do
-      sub "Fantasy Music Vol 1"
-      sub "Fantasy Music Vol 2"
+      sub "Fantasy Music Vol. 1"
+      sub "Fantasy Music Vol. 2"
 
-      sub "Battle Music Vol 1"
-      sub "Battle Music Vol 2"
+      sub "Battle Music Vol. 1"
+      sub "Battle Music Vol. 2"
     end
 
     sub "Fantasy Meditations"
