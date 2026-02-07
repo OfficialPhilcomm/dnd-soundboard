@@ -1,14 +1,15 @@
 ---
 A Bard's Tale:
 A City in Sorrow:
+A New Dawn:
 Abandoned Ruins:
 Aberration Fight:
-  - combat
+- combat
 Ale and Anecdotes:
 Ambush:
-  - combat
+- combat
 Ancient Construct Fight:
-  - combat
+- combat
 Ancient Evil Awakens:
 Ancient Tomb:
 Arabian Nights:
@@ -16,35 +17,35 @@ Arctic Wilderness:
 Ashen Trails:
 Assault of Tenacity:
 Battle Arena:
-  - combat
+- combat
 Battle of Lost Souls:
-  - combat
+- combat
 Beach:
-  - ambience
+- ambience
 Blizzard:
-  - ambience
+- ambience
 Campfire:
-  - ambience
+- ambience
 Catacomb:
 Cave:
-  - ambience
+- ambience
 Cemetery:
 Chase:
 City Temple:
-  - city
+- city
 City in the Desert:
-  - city
+- city
 City of Thieves:
-  - city
+- city
 City of Towers:
-  - city
+- city
 City:
-  - ambience
+- ambience
 Cloud City:
-  - city
+- city
 Cosmic Horror:
 Cozy Tavern:
-  - tavern
+- tavern
 Creepy Dungeon:
 Dark Castle:
 Deep Waters:
@@ -52,41 +53,41 @@ Desert Excursion:
 Desert Ruins:
 Desolate Frostlands:
 Duel:
-  - combat
-  - session
+- combat
 Dungeon Boss:
 Dwarven City:
-  - city
+- city
 Eastern Village:
-  - session
-  - city
+- session
+- city
 Elven City:
-  - city
+- city
 Elven Garden:
 Elven Sanctuary:
 Elven Tavern:
-  - tavern
+- tavern
 Epic Combat:
-  - combat
+- combat
 Epic Fight:
-  - combat
+- combat
 Ethereal Plane:
 Far Realm:
 Farewell:
 Festival Town:
-  - city
+- city
 Feywild:
 Fiend Fight:
 Final Boss:
-  - combat
+- combat
+- session
 Forest (Night):
-  - ambience
+- ambience
 Forest:
-  - ambience
+- ambience
 Forsaken Town:
 Gala Night:
 Goblin Village:
-  - city
+- city
 Grand Romance:
 Green Plains:
 Hag's Hut:
@@ -95,24 +96,25 @@ Haunted Mansion:
 Heist:
 Investigating a Mystery:
 Island Village:
-  - city
+- city
 Journey's End:
 Jungle Village:
 Large City:
-  - city
+- city
 Last Goodbye:
 Long Rest:
 Lost City:
 Lost Technologies:
 Lost Temple Ruins:
 Low Level Combat:
-  - combat
+- combat
 Mage Battle:
-  - combat
+- combat
 Magic Item Shop:
 Marketplace:
-  - ambience
+- ambience
 Melancholic Journey:
+Midnight Library:
 Monster Lair:
 Mount Celestia:
 Mysterious Forest:
@@ -120,65 +122,65 @@ Mystic Forest:
 Mythic Encounter:
 Nautical Wonders:
 Nordic City:
-  - city
+- city
 One Bard Band:
 Orc City:
-  - city
+- city
 Orc War Camp:
 Peaceful Town:
-  - city
+- city
 Peaceful Travel:
 Peaceful Village:
-  - city
+- city
 Peaceful Woods:
 Pirate Attack:
 Pirate Tavern:
-  - tavern
+- tavern
 Quirky Combat:
-  - combat
+- combat
 Rain:
-  - ambience
-  - session
+- ambience
+- session
 Running From Guards:
 Sailing the Astral Sea:
 Sea Adventure:
 Seaside Town:
-  - city
+- city
 Session Zero:
 Sewers:
-  - ambience
+- ambience
 Shadowfell:
 Shady Alley:
 Shady Tavern:
-  - tavern
+- tavern
 Ship Combat:
-  - combat
+- combat
 Ship:
-  - ambience
+- ambience
 Skeleton Battle:
-  - combat
+- combat
 Small City:
-  - city
+- city
 Snowy City:
-  - city
+- city
 Spooky Cave:
 Stonehill Inn:
-  - tavern
+- tavern
 Struggle in the Jungle:
 Surprise:
 Suspense:
 Swamp:
-  - ambience
+- ambience
 Tavern Concert:
-  - tavern
+- tavern
 Tavern Dance:
-  - tavern
+- tavern
 Tavern Inn:
-  - tavern
+- tavern
 Tavern in a Desert:
-  - tavern
+- tavern
 Tavern:
-  - ambience
+- ambience
 Tense Negotiations:
 Tense Path:
 The Abyssal Passage:
@@ -186,25 +188,25 @@ The Adventure Begins:
 The Adventure Ends:
 The End of the Quest:
 The Last Fight:
-  - combat
+- combat
 The Party Reunites:
 The Tall Tales Tavern:
-  - tavern
+- tavern
 The Wandering Bard Tavern:
-  - tavern
+- tavern
 Thunderstorm:
-  - ambience
+- ambience
 Tragic Betrayal:
 Travellers Rest:
 Underdark:
 Underwater City:
-  - city
+- city
 Vampire Castle:
 Village Feast:
 Village:
-  - ambience
+- ambience
 Volcano:
-  - ambience
+- ambience
 Wasteland:
 Wild Wonders:
 Wilderness Travel:

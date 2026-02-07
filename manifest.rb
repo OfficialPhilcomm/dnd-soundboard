@@ -20,6 +20,11 @@ Staticz::Manifest.define do
       sub "Battle Music Vol 1"
       sub "Battle Music Vol 2"
     end
+
+    sub "Fantasy Meditations"
+    sub "Pandora Journey"
+    sub "Epic Japan"
+
     sub "YouTube"
 
     Dir["src/sounds/**/*.mp3"].each do |f|
